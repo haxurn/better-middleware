@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Express.js example using Better Auth middleware",
   "main": "dist/index.js",
+  "private": true,
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc",

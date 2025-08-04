@@ -4,6 +4,7 @@
   "description": "Koa.js example using Better Auth middleware",
   "main": "dist/index.js",
   "type": "module",
+  "private": true,
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
