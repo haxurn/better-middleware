@@ -45,7 +45,7 @@ await fastify.register(cookie, {
 
 // Create Better Auth middleware
 const authMiddleware = createAuthMiddleware({
-  baseURL: process.env.BETTER_AUTH_URL || "http://localhost:3000",
+  baseURL: process.env.BETTER_AUTH_URL || "http://localhost:4000",
 
   // Enable caching
   cache: {
