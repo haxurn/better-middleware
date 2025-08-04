@@ -1,0 +1,68 @@
+{
+  "name": "better-middleware",
+  "version": "0.0.1",
+  "description": "Better Auth middleware for backend routes",
+  "zshy": "./src/index.ts",
+  "license": "MIT",
+  "author": "haxurn",
+  "keywords": [
+    "better-middleware",
+    "better-auth",
+    "better-auth-middleware",
+    "better-auth-middleware-backend",
+    "better-auth-middleware-backend-routes"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "peerDependencies": {
+    "better-auth": "^1.3.4"
+  },
+  "scripts": {
+    "build": "zshy",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
+    "lint": "biome lint",
+    "check": "biome check",
+    "format": "biome format --write",
+    "check:write": "biome check --write",
+    "release": "pnpm build && pnpm bump && changeset publish",
+    "bump": "bumpp",
+    "changelog:check": "changeset status",
+    "examples:install": "cd examples && for dir in express fastify hono nextjs koa; do cd $dir && npm install && cd ..; done",
+    "examples:express": "cd examples/express && npm run dev",
+    "examples:fastify": "cd examples/fastify && npm run dev",
+    "examples:hono": "cd examples/hono && npm run dev",
+    "examples:nextjs": "cd examples/nextjs && npm run dev",
+    "examples:koa": "cd examples/koa && npm run dev"
+  },
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "@biomejs/biome": "^2.1.3",
+    "@changesets/cli": "^2.29.5",
+    "@types/node": "^24.2.0",
+    "@vitest/coverage-v8": "^2.1.8",
+    "@vitest/ui": "^2.1.8",
+    "better-auth": "^1.3.4",
+    "lru-cache": "^11.1.0",
+    "typescript": "^5.9.2",
+    "vitest": "^2.1.8",
+    "zshy": "^0.3.4"
+  },
+  "dependencies": {
+    "bumpp": "^10.2.2",
+    "tinyglobby": "^0.2.14"
+  }
+}
