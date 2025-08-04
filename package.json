@@ -38,7 +38,7 @@
     "check": "biome check",
     "format": "biome format --write",
     "check:write": "biome check --write",
-    "release": "pnpm build && pnpm bump && changeset publish",
+    "release": "pnpm build && pnpm bump && pnpm -r publish --access public --no-git-checks",
     "bump": "bumpp",
     "changelog:check": "changeset status",
     "examples:install": "cd examples && for dir in express fastify hono nextjs koa; do cd $dir && npm install && cd ..; done",
